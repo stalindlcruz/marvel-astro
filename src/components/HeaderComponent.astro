@@ -1,15 +1,73 @@
 ---
 import LoginComponent from "./LoginComponent.astro";
+import LogoComponent from "./LogoComponent.astro";
+import SubscribeComponent from "./SubscribeComponent.astro";
 ---
 
+<style>
+  header {
+    background-color: #202020;
+    /* background-color: cadetblue; */
+    height: 52px;
+    border-bottom: 1px solid #393939;
+  }
+
+  .header-container {
+    height: 52px;
+    display: grid;
+    align-items: center;
+    /* background-color: bisque; */
+    border-right: 1px solid #393939;
+    border-left: 1px solid #393939;
+  }
+
+  .col-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    border-right: 1px solid #393939;
+    cursor: pointer;
+    gap: 10px;
+  }
+
+  span {
+    color: #fff;
+  }
+
+  .header-col-logo-marvel {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 51px;
+  }
+
+  .header-col-subcribe {
+    /* background-color: aqua; */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    border-left: 1px solid #393939;
+  }
+</style>
+
 <header>
-  <div class="container">
-    <div class="row">
-      <div class="col-4">
-        <LoginComponent />
+  <div class="container header-container">
+    <div class="row header-row">
+      <div class="col-3 col-login">
+        <LoginComponent>
+          <span>|</span>
+        </LoginComponent>
       </div>
-      <div class="col-4"></div>
-      <div class="col-4"></div>
+
+      <div class="col-6 header-col-logo-marvel">
+        <LogoComponent />
+      </div>
+
+      <div class="col-3 header-col-subcribe">
+        <SubscribeComponent />
+      </div>
     </div>
   </div>
 </header>

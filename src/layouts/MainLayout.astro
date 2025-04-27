@@ -1,5 +1,6 @@
 ---
 import HeaderComponent from "../components/HeaderComponent.astro";
+import "../styles/global.css";
 ---
 
 <html lang="en">
@@ -21,9 +22,7 @@ import HeaderComponent from "../components/HeaderComponent.astro";
     <title>Astro</title>
   </head>
   <body>
-    <HeaderComponent>
-      <slot />
-    </HeaderComponent>
+    <HeaderComponent />
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
