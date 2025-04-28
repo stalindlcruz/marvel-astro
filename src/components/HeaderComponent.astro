@@ -1,7 +1,9 @@
 ---
+import ListComponent from "./ListComponent.astro";
 import LoginComponent from "./LoginComponent.astro";
 import LogoComponent from "./LogoComponent.astro";
 import SubscribeComponent from "./SubscribeComponent.astro";
+import SearchComponent from "./SearchComponent.astro";
 ---
 
 <style>
@@ -39,7 +41,7 @@ import SubscribeComponent from "./SubscribeComponent.astro";
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 51px;
+    height: 50px;
   }
 
   .header-col-subcribe {
@@ -50,23 +52,40 @@ import SubscribeComponent from "./SubscribeComponent.astro";
     height: 52px;
     border-left: 1px solid #393939;
   }
+
+  .header-container-md {
+  }
 </style>
 
 <header>
-  <div class="container header-container">
+  <div class="container header-container d-none d-lg-block">
     <div class="row header-row">
-      <div class="col-3 col-login">
+      <div class="col-lg-3 col-login">
         <LoginComponent>
-          <span>|</span>
+          <span class="d-none d-lg-block">|</span>
         </LoginComponent>
       </div>
 
-      <div class="col-6 header-col-logo-marvel">
+      <div class="col-lg-6 header-col-logo-marvel">
         <LogoComponent />
       </div>
 
-      <div class="col-3 header-col-subcribe">
+      <div class="col-lg-3 header-col-subcribe">
         <SubscribeComponent />
+      </div>
+    </div>
+  </div>
+
+  <div class="container header-container-md d-block d-lg-none">
+    <div class="row">
+      <div class="col-2">
+        <ListComponent />
+      </div>
+      <div class="col-8 d-flex justify-content-center">
+        <LogoComponent />
+      </div>
+      <div class="col-2">
+        <SearchComponent />
       </div>
     </div>
   </div>
