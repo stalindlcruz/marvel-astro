@@ -1,11 +1,48 @@
 ---
+interface Props {
+  width?: number;
+  height?: number;
+  fontSize?: number;
+  transform?: number;
+}
+const {
+  width = 130,
+  height = 52,
+  fontSize = 30,
+  transform = 1.6,
+} = Astro.props as Props;
 
+console.log(Astro);
 ---
 
-<div class="marvel-log">
+<style>
+  .div-marvel {
+    background-color: #ec1d24;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .h1-marvel {
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+</style>
+
+<div class="div-marvel" style={`width: ${width}px; height: ${height}px`}>
+  <h1
+    class="h1-marvel"
+    style={`font-size: ${fontSize}px; transform: scaleY(${transform});`}
+  >
+    MARVEL
+  </h1>
+</div>
+
+<!-- <div style="width: 200px;">
   <svg
-    width="130"
-    height="52"
+    width={width}
+    height={height}
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
     ><rect fill="#EC1D24" width="100%" height="100%"></rect><path
@@ -16,4 +53,4 @@
       d="M31.5 48V4H21.291l-3.64 22.735L14.102 4H4v44h8V26.792L15.577 48h4.229l3.568-21.208V48z"
     ></path></svg
   >
-</div>
+</div> -->
