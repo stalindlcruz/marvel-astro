@@ -1,5 +1,5 @@
 ---
-
+import LiNewsComponent from "./LiNewsComponent.astro";
 ---
 
 <style>
@@ -7,16 +7,39 @@
     height: 52px;
     background-color: #202020;
   }
+
+  .container-list {
+    display: grid;
+    width: 100%;
+    height: 52px;
+    /* background-color: rgb(153, 157, 161); */
+  }
+
+  .col-list {
+  }
+
+  .nav-ul {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+  }
 </style>
 
 <nav>
-  <div class="conatiner">
+  <div class="container container-list">
     <div class="row">
-      <div class="col">
-        <ul>
-          <li>
-            <a href="#"> NEWS </a>
-          </li>
+      <div class="col d-flex justify-content-center col-list">
+        <ul class="nav-ul">
+          <LiNewsComponent />
+          <LiNewsComponent />
+          <LiNewsComponent />
+          <LiNewsComponent />
+          <LiNewsComponent />
+          <LiNewsComponent />
+          <LiNewsComponent />
+          <LiNewsComponent />
         </ul>
       </div>
     </div>
