@@ -28,7 +28,9 @@ import FooterComponent from "../components/FooterComponent.astro";
   <body>
     <HeaderComponent />
     <NavComponent />
-    <MainComponent />
+    <MainComponent>
+      <slot />
+    </MainComponent>
     <FooterComponent />
 
     <LoginModalComponent />

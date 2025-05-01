@@ -1,5 +1,9 @@
 ---
+interface Props {
+  link?: string;
+}
 
+const { link } = Astro.props;
 ---
 
 <style>
@@ -15,5 +19,5 @@
 </style>
 
 <li class="nav-li selectd">
-  <a href="https://www.marvel.com/articles"> NEWS </a>
+  <a href={link}> <slot /> </a>
 </li>
